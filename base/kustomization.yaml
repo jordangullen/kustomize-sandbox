@@ -1,0 +1,14 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+metadata:
+  name: kustom
+
+namespace: kustom
+
+commonLabels:
+  app: kustom
+
+resources:
+- deployment.yaml
+- service.yaml
+- config-map.yaml
